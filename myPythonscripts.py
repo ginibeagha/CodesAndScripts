@@ -32,20 +32,21 @@ def testMethod():
 def testtry():
     while True:
         try:
-            value= input('choose a number between 1 and 20')
+            value= input('choose a number between 1 and 20: ')
             print(int(value))
-            break
+            continue
         except ValueError:
-            print ('that was not a number')
+            print ('that was not a number try again by hitting the enter key')
             continue
-        if int(value) > 20:
-            print('number is too high')
-            continue
-        elif int(value) < 1:    
-            print ('number too low')
-            continue
-        elif value=='q':
-            break
+        else:
+            if int(value) > 20:
+                print('number is too high try again by hitting the enter key')
+                continue
+            elif int(value) < 1:    
+                print ('number too low try again by hitting the enter key')
+                continue
+            elif value=='q':
+                break
             
 
 testtry()        
