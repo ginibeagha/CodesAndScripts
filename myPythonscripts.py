@@ -34,7 +34,6 @@ def testtry():
         try:
             value= input('choose a number between 1 and 20: ')
             print(int(value))
-            continue
         except ValueError:
             print ('that was not a number try again by hitting the enter key')
             continue
@@ -49,4 +48,6 @@ def testtry():
                 break
             
 
-testtry()        
+testtry()      
+class Circle1 (object):
+    suite  
