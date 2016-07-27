@@ -47,7 +47,7 @@ def regexTest(text):
     ##
     global lyrics
     text=lyrics
-    lettereg= re.compile(r'.\w{3}\s')
+    lettereg= re.compile(r'^.\w{3}\s')
     songreg=re.compile(r'\s(\w+\sday)')
     mo5= lettereg.findall(text)
     #mo5= songreg.findall(text)
