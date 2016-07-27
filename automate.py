@@ -34,7 +34,7 @@ def regexTest(text):
     mo=phonenumRegex.findall('my phone number is 213-222-4567, (333)-565-7890, 888-444-1234')
     print(mo)
     ##
-    batmanregex=re.compile(r'(B|b)(at)((wo)*man|mobile|menace)')
+    batmanregex=re.compile(r'((bat)(wo)*man(s)*|mobile|menace)',re.I)
     mo2=batmanregex.search(text)
     pos=text.index(mo2.group())
     mo3=batmanregex.search(text[pos+len(mo2.group()):])
@@ -47,10 +47,12 @@ def regexTest(text):
     ##
     global lyrics
     text=lyrics
-    lettereg= re.compile(r'\s\w\w\w\s')
+    lettereg= re.compile(r'.\w{3}\s')
     songreg=re.compile(r'\s(\w+\sday)')
     mo5= lettereg.findall(text)
     #mo5= songreg.findall(text)
     print(mo5)
+    mo6=lettereg.sub(r'1,2,3,4',text)
+    #print (mo6)
 regexTest("the batmobile of Batman is batwomans biggest attraction, hahahaha")
 
