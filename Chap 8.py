@@ -12,5 +12,9 @@ print(os.path.abspath('..\..'))
 print(os.path.getsize(os.path.join('d:','\\')))
 for file in os.listdir(os.path.join('\Program Files (x86)','putty')):
     print(file +" size is "+ str(os.path.getsize(os.path.join('\Program Files (x86)\putty', file))/1000)+" kb")
-
+newfile=open(os.path.join('d:\\', 'codesandscripts', 'newfile.txt'),'a')
+newfile.write("this is in addition to what was written before")
+newfile.close()
+newfile=open(os.path.join('d:\\', 'codesandscripts', 'newfile.txt'))
+print(newfile.read())
 
